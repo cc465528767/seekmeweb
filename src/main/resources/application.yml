@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/seekme?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: 'root'
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  mvc:
+    static-path-pattern: /**
+  resources:
+    static-locations: file:${img.location}
+
+
+img:
+  location: /home/pic/snipshot/
+
